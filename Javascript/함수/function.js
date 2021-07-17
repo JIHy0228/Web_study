@@ -160,3 +160,32 @@ const simpleMultiply = (a,b) => {
 (function hello() {
   console.log('IIFE');
 }) ();
+
+const cal = (command, a, b) => {
+
+  let result;
+  switch(command) {
+    case 'sum':
+      result = a + b;
+      break;
+    
+    case 'substract':
+      result = a - b;
+      break;
+    
+    case 'divide':
+      result = a / b;
+      break;
+    case 'multiply':
+      result = a * b;
+      break;
+    case 'remainder':
+      result = a % b;
+    default:
+      throw Error('unkonwun command');
+  }
+
+  return result;
+};
+
+console.log(cal('multiply',2,3));
