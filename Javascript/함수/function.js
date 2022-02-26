@@ -168,7 +168,6 @@ const cal = (command, a, b) => {
     case 'sum':
       result = a + b;
       break;
-    
     case 'substract':
       result = a - b;
       break;
@@ -184,7 +183,6 @@ const cal = (command, a, b) => {
     default:
       throw Error('unkonwun command');
   }
-
   return result;
 };
 
