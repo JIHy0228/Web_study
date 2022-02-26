@@ -10,7 +10,7 @@
   <meta name="author" content="Jihyeok"/>
   <link rel="icon" type="image/png" href="imgs/favicon.png" />
 
-  <script src="https://kit.fontawesome.com/539682a428.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/429e5764c0.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
@@ -24,31 +24,237 @@
       <a href="#">Jihyeok</a>
     </div>
       <ul class="navbar__menu">
-        <li class="navbar__menu__item">Home</li>
-        <li class="navbar__menu__item">About</li>
-        <li class="navbar__menu__item">Skills</li>
-        <li class="navbar__menu__item">Work</li>
-        <li class="navbar__menu__item">Testimonuals</li>
-        <li class="navbar__menu__item">Contents</li>
+        <li class="navbar__menu__item active" data-link="#home">Home</li>
+        <li class="navbar__menu__item" data-link="#about">About</li>
+        <li class="navbar__menu__item" data-link="#skills">Skills</li>
+        <li class="navbar__menu__item" data-link="#work">Work</li>
+        <li class="navbar__menu__item" data-link="#testimouals">Testimonuals</li>
+        <li class="navbar__menu__item" data-link="#contact">Contents</li>
       </ul>
     </div>
-    </nav>
+    
+  <!-- Toggle button -->
+  <button class="navbar__toggle-btn">
+    <i class="fas fa-bars"></i>
+  </button>
+  </nav>
   <!-- Home -->
   <section id="home">
-    <img src="imgs/my_avatar.jpg" alt="Jihyeok's profile" class="home__avater">
-    <h1 class="home__title">Hello,<br>I'm Dream Coder</h1>
-    <h2 class="home__description">A fronte_end developer</h2>
-    <button class="home__contact">Contact_me</button>
+    <div class="home__container">
+      <img src="imgs/my_avatar.jpg" alt="Jihyeok's profile" class="home__avatar">
+      <h1 class="home__title">Hello,<br>I'm Dream Coder</h1>
+      <h2 class="home__description">A fronte_end developer</h2>
+      <button class="home__contact">Contact_me</button>
+    </div>
   </section>
   <!-- About -->
-  <section id="about"></section>
+  <section id="about" class="section section__container">
+    <h1>About me</h1>
+    <p>창원대학교 컴퓨터공학과를 전공하고 있으며, 현재 4학년 2학기까지 마친 상태입니다. 
+       졸업 작품으로 안드로이드 어플인 코로나 알리미를 제작하였으며, A+을 받아 통과 되었습니다.
+       프론트엔드 엔지니어로서 반응형 웹을 능숙하게 제작하는 것이 목표입니다.</p>
+    
+       <div class="about__majors">
+         <ul class="aout__major">
+           <li class="major__icon"><i class="fab fa-html5"></i></li>
+           <li class="major__title">Front-end</li>
+           <li class="major__description">HTML, CSS, JavaScript</li>
+         </ul>
+
+         <ul class="aout__major">
+          <li class="major__icon"><i class="fas fa-mobile"></i></li>
+          <li class="major__title">Mobile</li>
+          <li class="major__description">Android, Java</li>
+        </ul>
+
+        <ul class="aout__major">
+          <li class="major__icon"><i class="fas fa-database"></i></li>
+          <li class="major__title">Database</li>
+          <li class="major__description">mysql</li>
+        </ul>
+       </div>
+       <div class="about__school">
+        <img src="imgs/cwnu.png" alt="" class="school__logo">
+        <div class="school__description">
+          <p class="school__name">국립, 창원대학교 컴퓨터공학 전공</p>
+        <p class="school__period">2015 ~ 2022</p>
+        </div>
+       </div>
+  </section>
   <!-- Skills -->
-  <section id="skills"></section>
+  <section id="skills" class="section">
+    <div class="section__container">
+      <h1>Skills</h1>
+      <h2>Skills & Attributes</h2>
+      <div class="skillset">
+        <div class="skillset__left">
+          <h3 class="skillset__title">Skills</h3>
+          <div class="skill">
+            <div class="skill__description">
+              <span>HTML</span>
+              <span>80%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value" style="width: 80%;"></div> 
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill__description">
+              <span>CSS</span>
+              <span>70%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value"style="width: 70%;"></div> 
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill__description">
+              <span>JAVA</span>
+              <span>85%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value" style="width: 85%;"></div> 
+            </div>
+          </div>
+        </div>
+  
+        <div class="skillset__right">
+          <div class="tools">
+            <h3 class="skillset__title">Tools</h3>
+            <ul class="tools__list">
+              <li><span>Android Studio</span></li>
+              <li><span>Visual Studio Code</span></li>
+              <li><span>Visual Studio</span></li>
+            </ul>
+          </div>
+          <div class="etc">
+            <h3 class="skillset__title">Etc.</h3>
+            <ul class="etc__list">
+              <li><span>Git</span></li>
+              <li><span>Math</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Work -->
-  <section id="work"></section>
+  <section id="work" class="section">
+    <div class="section__container">
+<h1>My work</h1>
+<h3>Projects</h3>
+<div class="work__categories">
+  <button class="category__btn selected" data-filter="*">
+    All <span class="category__count">8</span>
+  </button>
+  <button class="category__btn"data-filter="front-end">
+    Front-end <span class="category__count">3</span>
+  </button>
+  <button class="category__btn" data-filter="back-end">
+    Back-end <span class="category__count">3</span>
+  </button>
+  <button class="category__btn"data-filter="mobile">
+    Mobile <span class="category__count">2</span>
+  </button>
+</div>
+
+<div class="work__projects">
+  <a href="#" class="project" target="blank" data-type="front-end">
+    <img src="imgs/projects/youtube.png" alt="yotube" class = "priject__img">>
+    <div class="project__description">
+      <h3>Youtube Site</h3>
+      <span>Clone coding with HTML and CSS</span class = "priject__img">
+    </div>
+  </a>
+  <a href="#" class="project" target="blank" data-type="front-end">
+    <img src="imgs/projects/navbar.png" alt="nav" class = "priject__img">
+    <div class="project__description">
+      <h3>Response Navbar</h3>
+      <span>HTML, CSS with media query</span>
+    </div>
+  </a>
+  <a href="#" class="project" target="blank" data-type="front-end">
+    <img src="imgs/projects/game.png" alt="game" class = "priject__img">
+    <div class="project__description">
+      <h3>Shopping mall game</h3>
+      <span>HTML, CSS, JavaScript, Json</span>
+    </div>
+  </a>
+  <a href="#" class="project" target="blank" data-type="back-end">
+    <img src="imgs/projects/game.png" alt="game" class = "priject__img">
+    <div class="project__description">
+      <h3>Project</h3>
+      <span>Explantation</span>
+    </div>
+  </a>
+  <a href="#" class="project" target="blank" data-type="back-end">
+    <img src="imgs/projects/game.png" alt="game" class = "priject__img">
+    <div class="project__description">
+      <h3>Project</h3>
+      <span>Explantation</span>
+    </div>
+  </a>
+  <a href="#" class="project" target="blank" data-type="back-end">
+    <img src="imgs/projects/game.png" alt="game" class = "priject__img">
+    <div class="project__description">
+      <h3>Project</h3>
+      <span>Explantation</span>
+    </div>
+  </a>
+  <a href="#" class="project" target="blank" data-type="mobile">
+    <img src="imgs/projects/game.png" alt="game" class = "priject__img">
+    <div class="project__description">
+      <h3>Project</h3>
+      <span>Explantation</span>
+    </div>
+  </a>
+  <a href="#" class="project" target="blank" data-type="mobile">
+    <img src="imgs/projects/game.png" alt="game" class = "priject__img">
+    <div class="project__description">
+      <h3>Project</h3>
+      <span>Explantation</span>
+    </div>
+  </a>
+</div>
+    </div>
+  </section>
   <!-- Testimonuals -->
-  <section id="testimouals"></section>
-  <!-- Contents -->
-  <section id="contents"></section>
+  <section id="testimouals" class="section">
+    <div class="section__container">
+      <h1>Testimoials</h1>
+      <h3>see what they say about me</h3>
+      <div class="testimoials">
+        <div class="testimoial">
+          <img src="imgs/testimonial/people1.jpg" alt="" class="testimoial__avatar">
+          <div class="testimonial__speech-bubble">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque fuga libero nulla eveniet aperiam laborum, quis provident quibusdam officiis reprehenderit, placeat neque perspiciatis vero explicabo tempora, dignissimos accusantium inventore ducimus!</p>
+            <p class="name"><a href="">Jihyeok</a> / CWNU</p>
+          </div>
+        </div>
+        <div class="testimoial">
+          <div class="testimonial__speech-bubble">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque fuga libero nulla eveniet aperiam laborum, quis provident quibusdam officiis reprehenderit, placeat neque perspiciatis vero explicabo tempora, dignissimos accusantium inventore ducimus!</p>
+            <p class="name"><a href="">Jihyeok</a> / CWNU</p>
+          </div>
+          <img src="imgs/testimonial/people1.jpg" alt="" class="testimoial__avatar">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contacts -->
+  <section id="contact" class="section">
+    <h1 class="contact__title">Let's talk</h1>
+    <h2 class="contact__email">boss316482@gmail.com</h2>
+    <div class="contact__links">
+      <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-invision"></i></a>
+    </div>
+    <p class="contact__rights">2021 Dream Coding Jihyeok - All rights reserved</p>
+  </section>
+
+  <!-- Arrrow up -->
+  <button class="arrowup">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 </body>
 </html>
